@@ -1,0 +1,28 @@
+.header {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    background-color: #fff;
+}
+.header-menu {
+    display: inline-block;
+    float: right;
+}
+.header-menu-list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header-menu-item {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+.header-menu-link {
+    padding: 1em;
+    text-decoration: none;
+}
+.header-menu-link:last-child {
+    padding-right: 0;
+}
