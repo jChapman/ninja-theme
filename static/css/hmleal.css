@@ -1,5 +1,6 @@
 .header {
     padding: 10px 0;
+
     border-bottom: 1px solid rgba(0, 0, 0, .125);
     background-color: #fff;
 }
@@ -9,20 +10,41 @@
 }
 .header-menu-list {
     display: inline-block;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 .header-menu-item {
     display: inline-block;
+
     margin: 0;
     padding: 0;
+
     vertical-align: middle;
 }
 .header-menu-link {
-    padding: 1em;
+    padding: 1.25rem;
+
     text-decoration: none;
 }
 .header-menu-link:last-child {
     padding-right: 0;
+}
+
+footer {
+    font-size: 1.5rem;
+    font-style: italic;
+
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(0, 0, 0, .125);
+    background-color: #f4f4f4;
+}
+footer > p {
+    margin-bottom: 0;
 }
