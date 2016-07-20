@@ -33,12 +33,60 @@
 
     <div class="container">
         <div class="row">
-            <div class="one-half column" style="margin-top: 25%">
-                <h4>Basic Page</h4>
-                <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+            <div class"twelve columns">
+
+                <article class="post">
+                    <h4 class="post-title">
+                        <a href="#">Configurando envio de e-mails para teste</a>
+                    </h4>
+                    <ul class="post-list">
+                        <li>Dom 05 julho 2015</li>
+                    </ul>
+
+                    <div class="post-content">
+                        <img src="{{ SITEURL }}/theme/images/mailcatcher.png" style="float: left; display: inline;">
+                        <p>
+                            Últimamente tenho trabalhado bastante com envio de
+                            e-mails utilizando django e uma das questões que no
+                            inicio me encomodou foi como testar o layout sem
+                            precisar enviando para minha conta do gmail os e-mails
+                            gerados pelo meu sistema.
+                        </p>
+                        <p>
+                            Foi nesse momento que encontrei uma ferramenta muito
+                            interessante que foi o que foi o mailcatcher um servidor
+                            smtp que fica escutando uma porta local e capturado todos
+                            os emails enviados pelo django.
+                        </p>
+                        <p>
+                            O único problema foi que esse app é escrito em Ruby, o
+                            que não me permitia colocar ele junto com as dependências
+                            do projeto. Vagando pelo github foi que encontrei o maildump
+                            um clone do mailcatcher só que totalmente escrito em python.
+                        </p>
+                        <a class="button" href="#">Leia mais</a>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                {% for article in articles_page.object_list %}
+                <article>
+                    <h4>{{ article.title }}</h4>
+                </article>
+                {% endfor %}
             </div>
         </div>
     </div>
+    -->
 
     <footer>
         <p>O conteúdo deste blog está sob a licença <a href="//creativecommons.org/licenses/by/3.0/deed.pt_BR">Creative Commons Attribution 3.0</a>.</p>
