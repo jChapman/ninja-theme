@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="post">
+    <h4 class="post-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
+    <ul class="post-list">
+        <li>{{ article.date|strftime('%d %B %Y') }}</li>
+    </ul>
+
+    <div class="post-content">
+        <img src="{{ article.image }}">
+        {{ article.content }}
+    </div>
+</article>
+{% endblock %}

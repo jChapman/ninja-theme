@@ -1,96 +1,20 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <title>hmleal :: Ninja pythonista</title>
-    <meta name="author" content="Henrique Leal">
-    <meta name="description" content="">
+{% block content %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% for article in articles_page.object_list %}
+<article class="post">
+    <h4 class="post-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
+    <ul class="post-list">
+        <li>{{ article.date|strftime('%d %B %Y') }}</li>
+    </ul>
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/skeleton.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/hmleal.css">
-
-    <link rel="icon" href="{{ SITEURL }}/theme/images/favicon.png">
-</head>
-
-<body>
-
-    <div class="header">
-        <div class="container">
-            <a href="{{ SITEURL }}" class="header-menu-link">HenriqueLeal</a>
-            <div class="header-menu">
-                <ul class="header-menu-list">
-                    <li class="header-menu-item"><a class="header-menu-link" href="#">Contato</a></li>
-                    <li class="header-menu-item"><a class="header-menu-link" href="#">Contato</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="post-content">
+        <img src="{{ article.image }}">
+        {{ article.summary }}
+        <a class="button" href="{{ SITEURL }}/{{ article.url }}">Leia mais</a>
     </div>
+</article>
+{% endfor %}
 
-    <div class="container">
-        <div class="row">
-            <div class"twelve columns">
-
-                <article class="post">
-                    <h4 class="post-title">
-                        <a href="#">Configurando envio de e-mails para teste</a>
-                    </h4>
-                    <ul class="post-list">
-                        <li>Dom 05 julho 2015</li>
-                    </ul>
-
-                    <div class="post-content">
-                        <img src="{{ SITEURL }}/theme/images/mailcatcher.png" style="float: left; display: inline;">
-                        <p>
-                            Últimamente tenho trabalhado bastante com envio de
-                            e-mails utilizando django e uma das questões que no
-                            inicio me encomodou foi como testar o layout sem
-                            precisar enviando para minha conta do gmail os e-mails
-                            gerados pelo meu sistema.
-                        </p>
-                        <p>
-                            Foi nesse momento que encontrei uma ferramenta muito
-                            interessante que foi o que foi o mailcatcher um servidor
-                            smtp que fica escutando uma porta local e capturado todos
-                            os emails enviados pelo django.
-                        </p>
-                        <p>
-                            O único problema foi que esse app é escrito em Ruby, o
-                            que não me permitia colocar ele junto com as dependências
-                            do projeto. Vagando pelo github foi que encontrei o maildump
-                            um clone do mailcatcher só que totalmente escrito em python.
-                        </p>
-                        <a class="button" href="#">Leia mais</a>
-                    </div>
-                </article>
-
-
-            </div>
-        </div>
-
-    </div>
-
-    <!--
-    <div class="container">
-        <div class="row">
-            <div class="twelve columns">
-                {% for article in articles_page.object_list %}
-                <article>
-                    <h4>{{ article.title }}</h4>
-                </article>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    -->
-
-    <footer>
-        <p>O conteúdo deste blog está sob a licença <a href="//creativecommons.org/licenses/by/3.0/deed.pt_BR">Creative Commons Attribution 3.0</a>.</p>
-        <p>O código está disponível em <a href="//github.com/hmleal/" title="Contribute!">GitHub</a>.</p>
-    </footer>
-</body>
-</html>
+{% endblock %}

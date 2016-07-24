@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>hmleal :: Ninja pythonista</title>
+    <meta name="author" content="Henrique Leal">
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/skeleton.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/hmleal.css">
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
+
+    <link rel="icon" href="{{ SITEURL }}/theme/images/favicon.png">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <a href="{{ SITEURL }}" class="header-menu-link">HenriqueLeal</a>
+            <div class="header-menu">
+                <ul class="header-menu-list">
+                    <li class="header-menu-item"><a class="header-menu-link" href="#">Contato</a></li>
+                    <li class="header-menu-item"><a class="header-menu-link" href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class"twelve columns">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            O conteúdo deste blog está sob a licença
+            <a href="//creativecommons.org/licenses/by/3.0/deed.pt_BR">Creative Commons Attribution 3.0</a>.
+        </p>
+        <p>
+            O código está disponível em
+            <a href="//github.com/hmleal/" title="Contribute!">GitHub</a>.
+        </p>
+    </footer>
+
+</body>
+
+</html>
