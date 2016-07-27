@@ -23,12 +23,15 @@
     <div class="header">
         <div class="container">
             <a href="{{ SITEURL }}/" class="header-menu-link">{{ SITENAME }}</a>
+            {% if pages %}
             <div class="header-menu">
                 <ul class="header-menu-list">
-                    <li class="header-menu-item"><a class="header-menu-link" href="#">Contato</a></li>
-                    <li class="header-menu-item"><a class="header-menu-link" href="#">Contato</a></li>
+                    {% for page in pages %}
+                    <li class="header-menu-item"><a class="header-menu-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
+            {% endif %}
         </div>
     </div>
 
