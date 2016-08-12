@@ -1,7 +1,7 @@
-# hmleal-theme
+# ninja-theme
 > Another pelican theme
 
-hmleal-theme é um tema para o Pelican usado em meu blog pessoal, ele é baseado
+ninja-theme é um tema para o Pelican usado em meu blog pessoal, ele é baseado
 no framework Skeleton CSS e tem como ideia fundamental ser minimalista no uso
 de ferramentas externas.
 
